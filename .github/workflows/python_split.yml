@@ -12,10 +12,10 @@ on:
   pull_request:
     branches:
       - main
-    paths-ignore:
-        - .github/workflows/python_split.yml
-        - python/split/main.py
-        - python/split/sub.py
+    paths:
+      - .github/workflows/python_split.yml
+      - python/split/main.py
+      - python/split/sub.py
   
   workflow_dispatch:
 
@@ -30,4 +30,4 @@ jobs:
         with:
           python-version: '3.13'
 
-      - run: python main.py
+      - run: python python/split/main.py
