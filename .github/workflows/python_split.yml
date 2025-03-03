@@ -1,0 +1,33 @@
+name: python/split
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/python_split.yml
+      - python/split/main.py
+      - python/split/sub.py
+
+  pull_request:
+    branches:
+      - main
+    paths-ignore:
+        - .github/workflows/python_split.yml
+        - python/split/main.py
+        - python/split/sub.py
+  
+  workflow_dispatch:
+
+jobs:
+  execute:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5.4.0
+        with:
+          python-version: '3.13'
+
+      - run: python main.py
