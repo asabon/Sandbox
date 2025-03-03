@@ -4,7 +4,7 @@ from sub import sub
 
 if __name__ == '__main__':
     result = add(1, 2)
-    print ("1 + 2 = " + result)
+    print ("1 + 2 = " + str(result))
 
     result = sub(5, 3)
-    print ("5 - 3 = " + result)
+    print ("5 - 3 = " + str(result))
