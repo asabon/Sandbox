@@ -1,4 +1,3 @@
-import sys
 from sub import add
 from sub import sub
 
