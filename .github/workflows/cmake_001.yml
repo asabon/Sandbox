@@ -5,7 +5,8 @@ on:
     branches:
       - main
     paths:
-      - 'cmake/001/**'
+      - '.github/workflows/cmake_001.yml'
+      - 'projects/cmake/001/**'
   workflow_dispatch:
 
 jobs:

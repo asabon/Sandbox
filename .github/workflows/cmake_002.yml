@@ -1,11 +1,12 @@
-name: cmake-001
+name: cmake-002
 
 on:
   pull_request:
     branches:
       - main
     paths:
-      - 'cmake/002/**'
+      - '.github/workflows/cmake_002.yml'
+      - 'projects/cmake/002/**'
   workflow_dispatch:
 
 jobs:
