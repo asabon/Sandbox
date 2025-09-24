@@ -1,0 +1,28 @@
+name: cmake-003
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/cmake_003.yml'
+      - 'projects/cmake/003/**'
+  workflow_dispatch:
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install CMake
+        run: sudo apt-get install -y cmake
+
+      - name: Build with CMake
+        run: |
+          cd projects/cmake/003
+          rm -rf build
+          mkdir -p build
+          cd build
+          cmake ..
+          make
