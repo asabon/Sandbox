@@ -20,7 +20,7 @@ jobs:
 
       - name: Build with CMake
         run: |
-          cd cmake/003
+          cd projects/cmake/003
           rm -rf build
           mkdir -p build
           cd build
