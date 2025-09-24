@@ -1,0 +1,27 @@
+name: cmake-001
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'cmake/002/**'
+  workflow_dispatch:
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install CMake
+        run: sudo apt-get install -y cmake
+
+      - name: Build with CMake
+        run: |
+          cd cmake/002
+          rm -rf build
+          mkdir -p build
+          cd build
+          cmake ..
+          make
