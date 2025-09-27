@@ -1,4 +1,2 @@
-message("✅ Python tests and coverage report")
-
-python.test(path: "projects/python/002/test/test_main.py")
-python.coverage(path: "projects/python/002/coverage.xml")
+coverage_text = File.read("projects/python/002/coverage.txt")
+markdown("### Test Coverage Report\n\n```\n#{coverage_text}\n```")
