@@ -1,0 +1,2 @@
+coverage_text = File.read("projects/python/002/coverage.txt")
+markdown("### Test Coverage Report\n\n```\n#{coverage_text}\n```")
