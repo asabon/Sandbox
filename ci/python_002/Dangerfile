@@ -1,0 +1,4 @@
+message("✅ Python tests and coverage report")
+
+python.test(path: "projects/python/002/test/test_main.py")
+python.coverage(path: "projects/python/002/coverage.xml")
