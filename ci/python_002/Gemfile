@@ -1,4 +1,4 @@
 source "https://rubygems.org"
 
 gem "danger"
-gem "danger-python"
+gem "danger-python", git: "https://github.com/danger/danger-python.git"

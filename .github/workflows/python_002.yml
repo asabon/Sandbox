@@ -47,7 +47,8 @@ jobs:
             ${{ runner.os }}-gems-${{ hashFiles('ci/python_002/Gemfile') }}
             ${{ runner.os }}-gems-
 
-      - uses: MeilCli/danger-action@v6
+      - name: Run Danger
+        uses: MeilCli/danger-action@v6
         if: github.event_name == 'pull_request'
         with:
           plugins_file: 'ci/python_002/Gemfile'
