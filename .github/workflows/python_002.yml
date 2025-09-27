@@ -12,6 +12,9 @@ on:
 jobs:
   execute:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
     steps:
       - uses: actions/checkout@v4
 
@@ -28,7 +31,7 @@ jobs:
       - name: Run pytest
         working-directory: projects/python/002
         run: |
-          pytest --cov=source --cov-report=html --cov-report=term > coverage.txt
+          pytest --cov=source --cov-report=html:htmlcov --cov-report=term > coverage.txt
 
       - name: Upload coverage report
         uses: actions/upload-artifact@v4
